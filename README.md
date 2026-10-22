@@ -121,9 +121,95 @@ int main(void)
 4.what value does the function return ? 17
 5.what is the final output? 17.
 
+FUNCTION DECLARATION AND DEFINITION AND CALLING
+
+FUNCTION DECLARATION:
+A function declaration tells the compiler about afunction before the compiler encouters a call to it
+int add(int a,int b) is is also called as function signature or prototype
+funciton name is add
+int is return type and a,b are parameters and have semicolon 
+it just tells the compiler about the function 
+
+FUNCTION DEFINITION:
+funciton definition contains the actual code that performs the task.
+/*
+int add(int a,int b)
+{
+    return a+b;
+}
+*/
+
+FUNCTION CALLING:
+A function call requests the function to execute
+add(10.20);
+
+this gives values to the function definition arguments
+
+now the full code with these examples
+#include<stdio.h>
+int add(int a,int b);  //DECLARATION
+int main(void)
+{
+   int result=add(10,20); //FUNCTION CALL
+   printf("%d",result);
+   return 0;
+}
+
+int add(int a,int b) //DEFINITION
+{
+   return a+b;
+}
+
+if we write the funciton definition above main function there is no need for declaration if not needed.
+
+STAGE 5
+PARAMETERS/ARGUMENTS
+parameters are variables in function definition ---- int add(int a,int b)
+arguments are in the funciton call ---- add(a,b);
+##
+PRACTICE QUESTION 1
+
+int multiply(int p,int q)
+{
+  return p*q;
+}
+int main(void)
+{
+  int x=6;
+  int y=7;
+  int result=multiply(x,y);
+  return 0;
+}
+
+QUESTIONS:
+1. WHAT ARE THE PARAMETERS?  p,q
+2.WHAT ARE THE ARGUMENTS IN MULTIPLY(X,Y)? having x is 6 and y is 7
+3.WHAT VALUES DOES P RECEIVE? 6
+4.WAHT VALUES DOES Q RECEIVE? 7
+5.WHAT VALUES IS RETURNED BY MULTIPLY?  42
+
+2.
+#include<stdio.h>
+void change(int a)
+{
+  a=100;
+  printf("inside function :%d\n",a);
+}
+int main(void)
+{
+  int x=10;
+  change(x);
+  printf("inside main:%d\n",x);
+  return 0;
+}
+
+output is 100 ,10
+
+ 
+  
 
 
-    
+
 
 
 
