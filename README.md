@@ -205,11 +205,101 @@ int main(void)
 
 output is 100 ,10
 
- 
+STAGE 6: 
+PARAMETERS AND ARGUMENTS:
+PRACTICE PROBLEMS
+1.
+void calculate(int a, int b)
+{
+    a = a + 10;
+    b = b + 20;
+
+  printf("%d %d\n", a, b);
+}
+
+int main(void)
+{
+    int x = 5;
+    int y = 7;
+
+  calculate(x, y);
+
+  printf("%d %d\n", x, y);
+
+  return 0;
+}
+ans 1=15,b=27,x=5,y=7 CHANGING PARAMETERS DOES NOT CHANGE THE VALUES
+
+2.
+#include <stdio.h>
+
+void change(int a, int b)
+{
+    a = b;
+    b = 100;
+
+  printf("%d %d\n", a, b);
+}
+
+int main(void)
+{
+    int x = 10;
+    int y = 20;
+
+  change(x, y);
+
+  printf("%d %d\n", x, y);
+
+  return 0;
+}
   
+3.
+#include <stdio.h>
 
+int add(int a, int b)
+{
+    a = a + 5;
+    b = b + 10;
 
+  return a + b;
+}
 
+int main(void)
+{
+    int x = 10;
+    int y = 20;
+    int result;
+
+  result = add(x, y);
+
+  printf("%d\n", result);
+    printf("%d %d\n", x, y);
+
+  return 0;
+}
+
+ANS: 45 10 20
+
+4
+#include <stdio.h>
+
+void display(int n)
+{
+    printf("%d\n", n);
+}
+
+int main(void)
+{
+    int x = 10;
+
+  display(x + 5);
+
+  printf("%d\n", x);
+
+  return 0;
+}
+
+ANS: 15 10
 
 
 
