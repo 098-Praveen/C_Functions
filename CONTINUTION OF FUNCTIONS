@@ -29,6 +29,8 @@ int calculate(int n)
     printf("Hello");
 }
 
+
+
 after returning next statement won't execute
 
 #include <stdio.h>
@@ -149,6 +151,111 @@ void calculate(void)
 }
 is right
 
+STAGE 7:
+LOCAL VARIABLES:
+A VARIABLES WHICH IS DECLARED INSIDE THE FUNCTION  OR BLOCK
+
+#include <stdio.h>
+
+void display(void)
+{
+    int x = 10;
+    printf("%d\n", x);
+}
+
+int main(void)
+{
+    display();
+    return 0;
+}
+ANS: 10
+
+PRACTICE PROGRAMS:
+#include <stdio.h>
+
+void first(void)
+{
+    int a = 10;
+    printf("%d\n", a);
+}
+
+void second(void)
+{
+    printf("%d\n", a);
+}
+
+int main(void)
+{
+    first();
+    second();
+    return 0;
+}
+ANS IS PRINTS 10 NORMALLY  AND COMPILATION ERROR
+
+CONCEPT: WHAT HAPPENS WHENA LOCAL VARIABLE IS ACCESSED OUTSIDE ITS FUNCTION?
+
+#include <stdio.h>
+
+void display(void)
+{
+    int num = 50;
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", num);
+
+    return 0;
+}
+IT CAN'T BE ACCESSED BCZ COMPILATION ERROR
+GLOBAL VARIABLES:
+
+A GLOBAL VARIABLE IS DECLARED OUTSIDE ALL FUNCTIONS AND CAN GENERALLY  BE CACCESSED BT FUNCTIONS DECLARED AFTER IT 
+SUBJECT TO ITS SCOPE AND LINKAGE.
+
+#include <stdio.h>
+
+int num = 50;  // Global variable
+
+void display(void)
+{
+    printf("%d\n", num);
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", num);
+
+    return 0;
+}
+
+IT CAN BE ACCESSED 
+#include <stdio.h>
+
+int num = 100;
+
+void display(void)
+{
+    printf("%d\n", num);
+}
+
+int main(void)
+{
+    num = 200;
+
+    display();
+
+    printf("%d\n", num);
+
+    return 0;
+}
+OUTPUT IS 200 200
+
+ANY ONE OF THE FUNCTION MODIFIES THE NUM GLOBAL VARIABLE ITSELF CHANGES
+
+CONCEPT : LOCAL AND GLOBAL VARIABLES:
 
 
 
