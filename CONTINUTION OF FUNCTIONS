@@ -1,0 +1,156 @@
+STAGE 6:
+RETURN VALUES AND RETURN STATEMENTS:
+
+RETYRB VALUE:
+  A return value is the value a function sends back to the place where it was called
+
+#include <stdio.h>
+
+int square(int n)
+{
+    return n * n;
+}
+
+int main(void)
+{
+    int x = square(5);
+
+    printf("%d", x);
+
+    return 0;
+}
+
+x=25;
+
+ADDITIONAL BONUS
+int calculate(int n)
+{
+    return n * 2;
+    printf("Hello");
+}
+
+after returning next statement won't execute
+
+#include <stdio.h>
+
+int calculate(int n)
+{
+    printf("A\n");
+    return n * 2;
+    printf("B\n");
+}
+
+int main(void)
+{
+    int result = calculate(5);
+
+    printf("%d\n", result);
+
+    return 0;
+}
+
+A
+result is 10
+CONCEPT : CAN A FUNCTION HAVE MULTIPLE STATEMENTS:
+
+int check(int n)
+{
+  if(n>0)
+    return 1;
+  else
+    return 0;
+}
+only one return will be taken
+
+PRACTICE PROBLEM:
+#include <stdio.h>
+
+int check(int n)
+{
+    if (n > 10)
+        return 100;
+
+    return 50;
+}
+
+int main(void)
+{
+    printf("%d\n", check(15));
+    printf("%d\n", check(5));
+
+    return 0;
+}
+
+ANS IS FIRST PRINTF IS 100 AND SECOND PRINTF IS 50
+RETURN :
+ SENDS VALUE BACK TO THE CALLER AND ENDS CURRENT FUNCTION IMMEDIATELY
+FUNCTION:
+ DISPALYS TTEXT OR VALUES ON THE SCREEN AND DOES NOT AUTOMOATICALLY END THE FUNTION
+
+#include <stdio.h>
+
+int test(void)
+{
+    printf("Hello\n");
+    return 25;
+}
+
+int main(void)
+{
+    test();
+    return 0;
+}
+prints hello and returns 25 but can't be printed that is it
+
+
+#include <stdio.h>
+
+int test(void)
+{
+    printf("A\n");
+    return 10;
+}
+
+int main(void)
+{
+    int x = test();
+
+    printf("B\n");
+    printf("%d\n", x);
+
+    return 0;
+}
+ANS A
+B
+10
+
+VOID AND INT :
+int getNumber(void)
+{
+    return 10;
+}
+RETURNS A VALUE BUT ACCEPTS NO ARGUMENTS
+
+void showMessage(void)
+{
+    printf("Hello\n");
+}
+RETURNS NOTHING AND ACCEPTS NOTHING BUT PRINTS HELLO
+
+
+void calcualte(void)
+{
+   return 10;
+}
+here it is wrong 
+void calculate(void)
+{
+ return ;
+}
+is right
+
+
+
+
+
+
