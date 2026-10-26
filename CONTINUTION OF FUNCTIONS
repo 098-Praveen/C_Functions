@@ -257,6 +257,105 @@ ANY ONE OF THE FUNCTION MODIFIES THE NUM GLOBAL VARIABLE ITSELF CHANGES
 
 CONCEPT : LOCAL AND GLOBAL VARIABLES:
 
+PRACTICE PROBLEM
+#include <stdio.h>
+
+int num = 100;
+
+void display(void)
+{
+    int num = 500;
+    printf("%d\n", num);
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", num);
+    return 0;
+}
+
+ANS: 500
+100
+
+STAGE 7: VARIABLE SCOPE:
+
+#include <stdio.h>
+
+int main(void)
+{
+    int x = 10;
+
+    {
+        int x = 20;
+        printf("%d\n", x);
+    }
+
+    printf("%d\n", x);
+
+    return 0;
+}
+20 10
+#include <stdio.h>
+
+int x = 10;
+
+void display(void)
+{
+    x = 20;
+    int x = 30;
+    printf("%d\n", x);
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", x);
+
+    return 0;
+}
+
+30 20
+
+#include <stdio.h>
+
+int x = 5;
+
+void display(void)
+{
+    x = 25; gloabal variable changes here x=25 modification not and local variable.
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", x);
+
+    return 0;
+}
+25
+
+#include <stdio.h>
+
+int x = 10;
+
+void display(void)
+{
+    int x = 20;
+    x = 30;
+}
+
+int main(void)
+{
+    display();
+    printf("%d\n", x);
+
+    return 0;
+}
+changes the local only not global so x is 10.
+
+
+
 
 
 
