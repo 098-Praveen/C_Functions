@@ -1,0 +1,128 @@
+CALL BY VALUE:
+
+call by value means passing a copy of a variable's value to the function.
+function receives copy not original variable itself.
+  
+#include <stdio.h>
+
+void change(int num)
+{
+    num = 100;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    change(x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+x=10.
+  #include <stdio.h>
+
+void change(int num)
+{
+    num = num + 5;
+    printf("%d\n", num);
+}
+
+int main(void)
+{
+    int x = 10;
+
+    change(x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+15
+  10
+#include <stdio.h>
+
+void change(int a, int b)
+{
+    a = 100;
+    b = 200;
+}
+
+int main(void)
+{
+    int x = 10, y = 20;
+
+    change(x, y);
+
+    printf("%d %d\n", x, y);
+
+    return 0;
+}
+10,20
+  changing the parameter inside the function does not change the original variable.
+  modifying parameters does not modify the original variables.
+  #include <stdio.h>
+
+int change(int num)
+{
+    num = 50;
+    return num;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    x = change(x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+50
+
+  #include <stdio.h>
+
+int change(int num)
+{
+    num = 50;
+    return num;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    change(x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+returned value not stored in x
+so x is 10
+
+#include <stdio.h>
+
+void change(int *num)
+{
+    int x = 200;
+    num = &x;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+x is 10
+  
+  
+  
+  
