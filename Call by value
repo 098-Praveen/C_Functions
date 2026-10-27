@@ -125,5 +125,217 @@ x is 10
 changing the local pointer num does not change the original pointer or variable in main.
   
   
-  
-  
+  #include <stdio.h>
+
+void change(int *num)
+{
+    *num = 200;
+}
+
+int main(void)
+{
+    int x = 10;
+
+    change(&x);
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+output is 200
+
+STAGE 9: POINTERS AND FUNCTIONS:
+int x=10;
+int *p=&x;
+here p =&x and *p access the value inside x
+
+#include<stdio.h>
+void display(int *p)
+{
+    printf("%d",*p);
+}
+int main()
+{
+    int x=10;
+    display(&x);
+    
+    return 0;
+}
+here output is 10
+
+CONCEPT 2: MODIFYING VARIABLE THROUGH A POINTER:
+#include <stdio.h>
+PRACTICE PROGRAMMEE: 1
+void change(int *p)
+{
+    *p = 100;
+}
+
+int main(void)
+{
+    int x = 25;
+
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+output is 100
+
+2:
+#include <stdio.h>
+
+void change(int *p)
+{
+    int num = 50;
+    p = &num;
+    *p = 100;
+}
+
+int main(void)
+{
+    int x = 25;
+
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+ here x is 25  bcz x is didn't changed 
+
+PRACTICE PROGRAMME:3
+void change(int *p)
+{
+    int num = 50;
+    *p = num;
+}
+int main(void)
+{
+    int x = 25;
+
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+
+answer is : 50
+
+#include <stdio.h>
+
+void change(int *p)
+{
+    int num = 50;
+    *p = num;
+    p = &num;
+    *p = 100;
+}
+
+int main(void)
+{
+    int x = 25;
+
+    change(&x);
+
+    printf("%d\n", x);
+
+    return 0;
+}
+answer is 50
+
+
+PRACTICE PROGRAMME: 
+
+#include <stdio.h>
+void change(int *p)
+{
+    int num = 50;
+    p = &num;
+    *p = 100;
+    p = NULL;
+}
+
+int main(void)
+{
+    int x = 25;
+
+    change(&x);
+
+    printf("%d\n", x);
+    return 0;
+}
+
+
+#include <stdio.h>
+
+void change(int *p, int *q)
+{
+    *p = 100;
+    *q = 200;
+}
+
+int main(void)
+{
+    int a = 10, b = 20;
+
+    change(&a, &b);
+
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+a=100,b=200
+
+#include <stdio.h>
+
+void change(int *p, int *q)
+{
+    int temp = *p;
+    *p = *q;
+    *q = temp;
+}
+
+int main(void)
+{
+    int a = 10, b = 20;
+
+    change(&a, &b);
+
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+a=20,b=10.
+
+#include <stdio.h>
+
+void change(int *p, int *q)
+{
+    *p = *p + *q;
+    *q = *p - *q;
+    *p = *p - *q;
+}
+
+int main(void)
+{
+    int a = 5, b = 3;
+
+    change(&a, &b);
+
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+a=3,b=5
+
+STAGE 10: ARRAYS AND FUNCTIONS:
+
+
+
+
+
