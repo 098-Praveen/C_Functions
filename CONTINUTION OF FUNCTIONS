@@ -353,6 +353,56 @@ int main(void)
     return 0;
 }
 changes the local only not global so x is 10.
+ADDITIONAL PROGRAMME:
+
+WRITE A PRGM RETURN EVEN AND ODD TO MAIN:
+#include<stdio.h>
+int func(int a[],int n,int *ecount,int *ocount)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]%2==0)
+        {
+            *ecount++;
+        }
+        else
+        {
+            *ecount++;
+        }
+    }
+}
+int main()
+{
+    int even=0,odd=0;
+    int a[]={1,2,3,4,5,6,7};
+    int n=sizeof(a)/sizeof(a[0]);
+    func(a,n,&even,&odd);
+    printf("even:%d\n",even);
+    printf("odd:%d",odd);
+    
+}
+SAME LIKE BUT YOU NEED TO RETURN SUM AND AVG:
+#include<stdio.h>
+void sum(int a[],int n,int *add,int *avg)
+{
+    *add=0,*avg=0;
+    for(int i=0;i<n;i++)
+    {
+        *add=*add+a[i];
+    }
+    *avg=*add/5;
+}
+int main()
+{
+    int a[]={1,2,3,4,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    int add=0,avg=0;
+    sum(a,n,&add,&avg);
+    printf("sum:%d\n",add);
+    printf("avg:%d",avg);
+    return 0;
+}
 
 
 
