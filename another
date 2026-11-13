@@ -1,0 +1,58 @@
+SEARCH AN ELEMENT IN AN ARRAY USING CALL BY VALUE AND RETURRN IT'S INDEX:
+
+#include<stdio.h>
+int search(int a[],int n)
+{
+    int key=9,found=0,i;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            found=1;
+            break;
+        }
+    }
+    if(found==1)
+    {
+        return i;
+    }
+    else
+    {
+        return -1;
+    }
+}
+int main()
+{
+    int a[]={1,2,3,4,5,6,7,8};
+    int n=sizeof(a)/sizeof(a[0]);
+    int idx=search(a,n);
+    printf("idx=%d",idx);
+    return 0;
+}
+
+PROGRAMME: REVERSE AN ARRAY AND RETURN THE ARRAY TO MAIN:
+#include<stdio.h>
+int * reverse(int a[],int n)
+{
+    int i,j,temp;
+    for(i=0,j=4;i<=j;j--,i++)
+    {
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+        
+    }
+    return a;
+}
+int main()
+{
+    int a[]={1,2,3,4,5};
+    int n=sizeof(a)/sizeof(a[0]);
+    int *b=reverse(a,n);
+    
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",b[i]);
+    }
+    return 0;
+}
