@@ -1,0 +1,61 @@
+STRINGS AND FUNCTIONS:
+GOAL: LEARN HOW TO PASS STRINGS TO FUNCTIONS, MODIFY THEM, AND PERFORM STRING OPERATIONS USING FUNCTIONS.
+
+CONCEPT:
+PASSING A STRING TO A FUNCTION:
+
+#include <stdio.h>
+
+void display(char str[])
+{
+    printf("%s", str);
+}
+
+int main()
+{
+    char name[] = "PRAVEEN";
+
+    display(name);
+
+    return 0;
+}
+MODIFYING A STRING INSIDE A FUNCTION:
+
+
+#include<stdio.h>
+void modify(char ptr[])
+{
+    ptr[0]='H';
+    
+}
+int main()
+{
+    char name[]="hello";
+    modify(name);
+    printf("%s",name);
+    return 0;
+    
+}
+
+IMP: WE CAN MODIFY THE ORG STRING THROUGH A FUNCTION BCZ THE FUNCITON RECEIVES A PTR TO IT'S CHAR'S.
+
+PRACTICE PRGM:
+STRING LENGTH USING A FUNCTIONS:
+
+#include<stdio.h>
+int strlength(char ptr[])
+{
+    int i,count=0;
+    for(i=0;ptr[i];i++)
+    {
+        count++;
+    }
+    return count;
+}
+int main()
+{
+    char str[]="praveen";
+    int count=strlength(str);
+    printf("%d",count);
+    return 0;
+}
